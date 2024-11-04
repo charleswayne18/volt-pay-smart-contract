@@ -1,0 +1,68 @@
+{
+  "name": "VoltPay",
+  "desc": "",
+  "methods": [
+    {
+      "name": "optInToApplication",
+      "args": [],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "name": "makeVtuPayment",
+      "desc": "This method is called by a person that wants to make a VTU payment",
+      "args": [
+        {
+          "name": "paymentTxn",
+          "type": "pay",
+          "desc": "The transaction containing payment for the VTU request"
+        },
+        {
+          "name": "phone",
+          "type": "string",
+          "desc": "The phone number for the request."
+        },
+        {
+          "name": "operator",
+          "type": "string",
+          "desc": "The VTU operator"
+        },
+        {
+          "name": "type",
+          "type": "string",
+          "desc": "The VTU type"
+        },
+        {
+          "name": "value",
+          "type": "string",
+          "desc": "The VTU value"
+        }
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "name": "revokePoints",
+      "desc": "This revokes the points of a user in the event of\na refund.",
+      "args": [
+        {
+          "name": "refundTransaction",
+          "type": "pay",
+          "desc": "The transaction refunding the user."
+        }
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "name": "createApplication",
+      "args": [],
+      "returns": {
+        "type": "void"
+      }
+    }
+  ]
+}
